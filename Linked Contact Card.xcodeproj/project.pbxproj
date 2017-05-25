@@ -56,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600145951ED6B26B00D71999 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				602B140D1ED68A5B0063AB68 /* AppDelegate.swift */,
+				602B14141ED68A5B0063AB68 /* Assets.xcassets */,
+				602B14161ED68A5B0063AB68 /* LaunchScreen.storyboard */,
+				602B14191ED68A5B0063AB68 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		602B14011ED68A5B0063AB68 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +88,9 @@
 		602B140C1ED68A5B0063AB68 /* Linked Contact Card */ = {
 			isa = PBXGroup;
 			children = (
-				602B140D1ED68A5B0063AB68 /* AppDelegate.swift */,
+				600145951ED6B26B00D71999 /* Supporting files */,
 				602B140F1ED68A5B0063AB68 /* ViewController.swift */,
 				602B14111ED68A5B0063AB68 /* Main.storyboard */,
-				602B14141ED68A5B0063AB68 /* Assets.xcassets */,
-				602B14161ED68A5B0063AB68 /* LaunchScreen.storyboard */,
-				602B14191ED68A5B0063AB68 /* Info.plist */,
 			);
 			path = "Linked Contact Card";
 			sourceTree = "<group>";
@@ -146,7 +154,7 @@
 				TargetAttributes = {
 					602B14091ED68A5B0063AB68 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = T8PDTBYP3L;
+						DevelopmentTeam = MY5U7ENCBF;
 						ProvisioningStyle = Automatic;
 					};
 					602B141D1ED68A5B0063AB68 = {
@@ -343,11 +351,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T8PDTBYP3L;
+				DEVELOPMENT_TEAM = MY5U7ENCBF;
 				INFOPLIST_FILE = "Linked Contact Card/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Linked-Contact-Card";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BenDuke.Linked-Contact-Card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -357,11 +365,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T8PDTBYP3L;
+				DEVELOPMENT_TEAM = MY5U7ENCBF;
 				INFOPLIST_FILE = "Linked Contact Card/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Linked-Contact-Card";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BenDuke.Linked-Contact-Card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -416,6 +424,7 @@
 				602B14291ED68A5B0063AB68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		602B142A1ED68A5B0063AB68 /* Build configuration list for PBXNativeTarget "Linked Contact CardTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +433,7 @@
 				602B142C1ED68A5B0063AB68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
