@@ -18,8 +18,6 @@ class CardListTableViewCell: UITableViewCell {
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView?
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

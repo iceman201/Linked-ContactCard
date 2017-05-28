@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCardCell" rowHeight="120" id="5Cj-2e-LYb" customClass="CardListTableViewCell" customModule="Linked_Contact_Card" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCardCell" rowHeight="130" id="5Cj-2e-LYb" customClass="CardListTableViewCell" customModule="Linked_Contact_Card" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Cj-2e-LYb" id="Vh0-Pa-xpB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIH-E9-4N3">
@@ -58,7 +58,6 @@
                                     <outlet property="fullNameLabel" destination="sIe-00-3YA" id="Vfw-pc-dPs"/>
                                     <outlet property="jobTitleLabel" destination="ysI-JP-9Ao" id="NMi-S4-TVU"/>
                                     <outlet property="profilePicture" destination="MIH-E9-4N3" id="3WF-vY-6bM"/>
-                                    <segue destination="Sgy-yc-NgC" kind="show" identifier="goToDetail" action="showDetailViewController:sender:" id="VVs-Wx-2IG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,14 +69,14 @@
                     <navigationItem key="navigationItem" title="My Cards" id="1od-ua-uEE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="np1-i8-xAA">
                             <connections>
-                                <segue destination="Sgy-yc-NgC" kind="show" id="dFg-rh-hF0"/>
+                                <segue destination="Sgy-yc-NgC" kind="show" identifier="editCard" id="pTO-89-43C"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrY-JN-wLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="69.293478260869577"/>
+            <point key="canvasLocation" x="2519" y="-32"/>
         </scene>
         <!--Edit Card-->
         <scene sceneID="CYa-lG-O5t">
@@ -122,7 +121,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="CellLabel" destination="jEi-hJ-VXh" id="h7Y-Da-D8d"/>
+                                    <outlet property="cellLabel" destination="jEi-hJ-VXh" id="Pt1-k6-1mN"/>
                                     <outlet property="cellTextField" destination="CU0-1A-PzX" id="Rc9-2d-13a"/>
                                 </connections>
                             </tableViewCell>
@@ -136,7 +135,8 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fiT-gD-5RM"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="GBG-72-njh">
                             <connections>
-                                <segue destination="Z7G-65-6KF" kind="unwind" unwindAction="unwindToCardListWithSender:" id="LhU-c0-OEV"/>
+                                <action selector="saveButtonAction:" destination="Sgy-yc-NgC" id="xnW-ym-Jb1"/>
+                                <segue destination="Ouf-TF-YQs" kind="show" identifier="savedCard" id="eCU-FZ-myC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -145,9 +145,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6S-an-2SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Z7G-65-6KF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3658" y="30"/>
+            <point key="canvasLocation" x="3525" y="-49"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aig-TC-EIQ">
@@ -169,6 +168,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dFg-rh-hF0"/>
+        <segue reference="eCU-FZ-myC"/>
     </inferredMetricsTieBreakers>
 </document>
