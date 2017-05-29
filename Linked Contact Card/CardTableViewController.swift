@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class CardTableViewController: UITableViewController , UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     // Mark: Properties
+    var people: [NSManagedObject] = []
+    
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     var card : [Card] = Card.sharedInstance.cardArray
@@ -38,6 +41,24 @@ class CardTableViewController: UITableViewController , UITextFieldDelegate, UIIm
         cardToSave.email = celldata[4]
         cardToSave.phone = celldata[5]
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context)
+        newUser.setValue(cardToSave.firstName, forKey: "firstName")
+        newUser.setValue(cardToSave.lastName, forKey: "lastName")
+        newUser.setValue(cardToSave.email, forKey: "email")
+        newUser.setValue(cardToSave.company, forKey: "company")
+        newUser.setValue(cardToSave.jobTitle, forKey: "jobTitle")
+        newUser.setValue(cardToSave.phone, forKey: "phone")
+        
+        
+        // save to core data
+        do {
+            try context.save()
+        } catch let error {
+            assertionFailure(error.localizedDescription)
+        }
+        
         // Append the temp card to the singletion
         Card.sharedInstance.cardArray.append(cardToSave)
         
@@ -53,13 +74,7 @@ class CardTableViewController: UITableViewController , UITextFieldDelegate, UIIm
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-      
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
     
     // MARK: - Table view data source

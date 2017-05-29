@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CardListTableViewController: UITableViewController {
     
@@ -16,11 +17,33 @@ class CardListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("I didload")
-        
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // Reading from core data
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            if result.count > 0 {
+                for each in result as! [NSManagedObject] {
+                    if let firstName = each.value(forKey: "firstName") as? String {
+                        print(firstName)
+                        // once come back from save function
+                        //1. refresh your dataArray
+                        //    tableView.reloadData()
+                    }
+                }
+            }
+        } catch let error {
+            assertionFailure(error.localizedDescription)
+        }
+        
+        ////
         
         if passedCard != nil{
             cards.append(passedCard!)

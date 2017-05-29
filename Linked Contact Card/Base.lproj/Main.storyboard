@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Cj-2e-LYb" id="Vh0-Pa-xpB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIH-E9-4N3">
@@ -76,7 +76,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrY-JN-wLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2519" y="-32"/>
+            <point key="canvasLocation" x="2575" y="27"/>
         </scene>
         <!--Edit Card-->
         <scene sceneID="CYa-lG-O5t">
@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kuj-k4-ast" id="CWr-38-j30">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CellLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-hJ-VXh" userLabel="Cell Label">
@@ -136,7 +136,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="GBG-72-njh">
                             <connections>
                                 <action selector="saveButtonAction:" destination="Sgy-yc-NgC" id="xnW-ym-Jb1"/>
-                                <segue destination="Ouf-TF-YQs" kind="show" identifier="savedCard" id="eCU-FZ-myC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -167,7 +166,4 @@
             <point key="canvasLocation" x="1669.5652173913045" y="69.293478260869577"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eCU-FZ-myC"/>
-    </inferredMetricsTieBreakers>
 </document>

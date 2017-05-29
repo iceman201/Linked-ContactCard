@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C959151EDBCDB9003BAD38 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05C959111EDBC84C003BAD38 /* Model.xcdatamodeld */; };
 		600145971ED7A6D700D71999 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600145961ED7A6D700D71999 /* Card.swift */; };
 		600145A01ED90B4E00D71999 /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6001459F1ED90B4E00D71999 /* CardDetailTableViewCell.swift */; };
 		600145A41ED90DD500D71999 /* SystemBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600145A31ED90DD500D71999 /* SystemBrain.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05C959121EDBC84C003BAD38 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		600145961ED7A6D700D71999 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6001459F1ED90B4E00D71999 /* CardDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailTableViewCell.swift; sourceTree = "<group>"; };
 		600145A31ED90DD500D71999 /* SystemBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemBrain.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				602B140D1ED68A5B0063AB68 /* AppDelegate.swift */,
 				602B14141ED68A5B0063AB68 /* Assets.xcassets */,
 				602B14161ED68A5B0063AB68 /* LaunchScreen.storyboard */,
+				05C959111EDBC84C003BAD38 /* Model.xcdatamodeld */,
 				602B14191ED68A5B0063AB68 /* Info.plist */,
 			);
 			name = "Supporting files";
@@ -256,6 +259,7 @@
 				600145971ED7A6D700D71999 /* Card.swift in Sources */,
 				600145A41ED90DD500D71999 /* SystemBrain.swift in Sources */,
 				602B140E1ED68A5B0063AB68 /* AppDelegate.swift in Sources */,
+				05C959151EDBCDB9003BAD38 /* Model.xcdatamodeld in Sources */,
 				600145A61ED9101700D71999 /* CardTableViewController.swift in Sources */,
 				600145A81ED9382200D71999 /* CardListTableViewController.swift in Sources */,
 				600145AA1ED9387800D71999 /* CardListTableViewCell.swift in Sources */,
@@ -401,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MY5U7ENCBF;
 				INFOPLIST_FILE = "Linked Contact Card/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BenDuke.Linked-Contact-Card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MY5U7ENCBF;
 				INFOPLIST_FILE = "Linked Contact Card/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BenDuke.Linked-Contact-Card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +488,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		05C959111EDBC84C003BAD38 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05C959121EDBC84C003BAD38 /* Model.xcdatamodel */,
+			);
+			currentVersion = 05C959121EDBC84C003BAD38 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 602B14021ED68A5B0063AB68 /* Project object */;
 }
